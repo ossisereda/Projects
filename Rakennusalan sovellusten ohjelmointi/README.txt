@@ -1,0 +1,1 @@
+This folder contains the project work done for the course "Rakennusalan sovellusten ohjelmointi" (Tampere University). In addition to the program itself, documentation for the program and the given task are also provided (in Finnish).
