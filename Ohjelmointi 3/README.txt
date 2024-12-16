@@ -1,6 +1,6 @@
 This folder contains the project work done for the course "Ohjelmointi 3: Rajapinnat ja tekniikat" (Tampere University). The documentation file (only in Finnish) gives insight to the functionality of the program. The project was done in a group of two.
 
-The classes can be found in directory Ohjelmointi 3\Sisu\src\main\java\fi\tuni\prog3\sisu
+The java-files can be found in directory Ohjelmointi 3\Sisu\src\main\java\fi\tuni\prog3\sisu
 
 
 
