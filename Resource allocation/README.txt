@@ -1,0 +1,3 @@
+This folder contains the final back-end for a VBA-based data-driven allocation tool created for a company. The process included multiple hearings of the customer and a noteworthy testing phase followed by a pilot phase with the end-users. During the pilot phase bug-fixes and performance optimization was done according to the feedback given by the users. Currently the program is in weekly use.
+
+The front-end of the program is deliberately excluded due to data protection. 
