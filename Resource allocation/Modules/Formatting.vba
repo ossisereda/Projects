@@ -1,31 +1,36 @@
 Attribute VB_Name = "Formatting"
 
 Private Sub Conditions(totalHours As Double, weekHours As Double, cell As Range)
-' Värimuotoilun ehdot (prosentuaaliset rajat tavoitetunneista)
+' VÃ¤rimuotoilun ehdot (prosentuaaliset rajat tavoitetunneista)
 
     Dim deviation As Double
     
-    ' Erikoistapaus: nollalla jakamisen estäminen
+    ' Erikoistapaus: nollalla jakamisen estÃ¤minen
     If weekHours = 0 Then
-        cell.Interior.Color = RGB(0, 255, 0)
+        cell.Interior.Color = RGB(0, 255, 0) ' vihreÃ¤
         Exit Sub
     End If
     
-    deviation = Abs((totalHours - weekHours) / weekHours)
+    deviation = (totalHours - weekHours) / weekHours
     
-    If deviation > 0.3 Then
-        cell.Interior.Color = RGB(255, 0, 0)
-    ElseIf deviation > 0.15 And deviation <= 0.3 Then
-        cell.Interior.Color = RGB(255, 165, 0)
-    Else
-        cell.Interior.Color = RGB(0, 255, 0)
-    End If
+    Select Case deviation
+        Case Is < -0.3
+            cell.Interior.Color = RGB(255, 0, 0) ' punainen
+        Case Is < -0.15
+            cell.Interior.Color = RGB(255, 165, 0) ' oranssi
+        Case Is <= 0.15
+            cell.Interior.Color = RGB(0, 255, 0) ' vihreÃ¤
+        Case Is <= 0.3
+            cell.Interior.Color = RGB(255, 165, 0) ' oranssi
+        Case Else
+            cell.Interior.Color = RGB(255, 0, 0) ' punainen
+    End Select
 
 End Sub
 
 
 Public Sub Format(cell As Range)
-    ' Hakee tuntitiedot välimuistista ja muotoilee solun ehtojen mukaan
+    ' Hakee tuntitiedot vÃ¤limuistista ja muotoilee solun ehtojen mukaan
     Dim name As String, key As String
     Dim totalHours As Double, absences As Double, weekHours As Double
     Dim values As Variant
